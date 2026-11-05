@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #25231f;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: white;
+    box-shadow: 0 2px 10px #00000008;
+}
+
+
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f18b58;
+}
+
+.signin {
+    background: #f18b58;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    margin: 35px 7%;
+    padding: 60px;
+    background: #ffeadb;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #f18b58;
+}
+
+.hero p {
+    margin: 20px 0;
+    color: #777;
+}
+
+.hero-image {
+    font-size: 180px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f18b58;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Products */
+
+.products {
+    padding: 50px 7%;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #00000010;
+}
+
+.product-img {
+    height: 160px;
+    background: #f8f1eb;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    color: #888;
+    margin: 10px 0;
+}
+
+.card h4 {
+    color: #f18b58;
+    margin: 15px 0;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #25231f;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #f18b58;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffeadb;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #25231f;
+    color: white;
+}
+
+/* Sign In */
+
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #00000080;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    width: 350px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-box h2 {
+    margin-bottom: 25px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.modal-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #f18b58;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-box p {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
